@@ -1,0 +1,34 @@
+GET http://localhost:3000/clientes
+
+#####
+
+GET http://localhost:3000/clientes/09876543
+
+#####
+POST http://localhost:3000/clientes
+Content-Type: application/json
+
+{
+    "cedula": "1129526228",
+    "nombre": "Vicky Milena Navarro",
+    "telefono": "1234567890",
+    "email": "geomersimanca@gmail.com"
+    
+}
+
+######
+
+PUT http://localhost:3000/clientes/1043663593
+Content-Type: application/json
+
+{
+    "nombre": "Geomer",
+    "telefono": "3014275759",
+    "email": "geomersimanca@gmail.com"
+    
+}
+
+
+######
+
+DELETE http://localhost:3000/clientes/1129526228

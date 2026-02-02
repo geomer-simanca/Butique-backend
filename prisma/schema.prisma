@@ -1,0 +1,125 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Clientes{
+  id String @id @default(uuid())
+  cedula String @unique
+  nombre String
+  telefono String?
+  email String?
+  compras Int @default(0)
+  total_comprado Float @default(0)
+  creditos Int @default(0)
+  ultima_compra DateTime?
+  fecha_creacion DateTime @default(now())
+
+  factura Factura[]
+  credit Creditos[]
+}
+
+model Productos{
+  id String @id @default(uuid())
+  nombre String
+  genero String?
+  precio_costo Float
+  precio_venta Float
+  stock_inicial Int
+  stock_minimo Int @default(5)
+  proveedor String?
+  descripcion String?
+
+  detalle Carrito_detalle[]
+}
+
+model Carrito{
+  id String @id @default(uuid())
+  fecha DateTime @default(now())
+  estado String
+
+  detalle Carrito_detalle[]
+  factura Factura[]
+}
+
+model Carrito_detalle{
+  id String @id @default(uuid())
+  id_carrito String                           
+  id_producto String
+  cantidad Int
+  preciounitario Float
+  subtotal Float
+
+  carrito Carrito @relation(fields: [id_carrito], references: [id])
+  producto Productos @relation(fields: [id_producto], references: [id])
+}
+
+model Factura{
+  id String @id @default(uuid())
+  id_carrito String
+  id_cliente String
+  fecha DateTime @default(now())
+  total Float
+  metodo_pago String?
+  descuento Float @default(0)
+  tipo_venta String
+
+  carrito Carrito @relation(fields: [id_carrito], references: [id])
+  cliente Clientes @relation(fields: [id_cliente], references: [id])
+
+  creditos Creditos[]
+}
+
+model Creditos{
+  id String @id @default(uuid())
+  id_cliente String
+  id_factura String
+  tipo_interes String
+  valor_interes Float
+  monto_total Float
+  debe Float
+  numero_cuotas Int
+  fecha_inicio DateTime @default(now())
+  estado String
+
+  cliente Clientes @relation(fields: [id_cliente], references: [id])
+  factura Factura @relation(fields: [id_factura], references: [id])
+
+  cuotas Cuotas[]
+}
+
+model Pago_interes{
+  id String @id @default(uuid())
+  id_cuota String
+  fecha_pago DateTime
+  monto_pagado Float
+  metodo_pago String
+
+  cuota Cuotas @relation(fields: [id_cuota], references: [id])
+}
+
+model Cuotas{
+  id String @id @default(uuid())
+  id_credito String
+  numero_cuota Int
+  monto_cuota Float
+  fecha_vencimiento DateTime
+  estado String
+
+  credito Creditos @relation(fields: [id_credito], references: [id])
+
+  pagos Pago_interes[]
+}
+
+
+

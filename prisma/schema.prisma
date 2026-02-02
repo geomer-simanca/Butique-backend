@@ -32,6 +32,7 @@ model Clientes{
 model Productos{
   id String @id @default(uuid())
   nombre String
+  codigo String @unique 
   genero String?
   precio_costo Float
   precio_venta Float

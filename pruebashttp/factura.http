@@ -1,0 +1,37 @@
+GET http://localhost:3000/facturas
+
+#####
+
+GET http://localhost:3000/facturas/ed6d786c-3fc9-43f6-b2ad-e756aac4323c
+
+#####
+POST http://localhost:3000/facturas
+Content-Type: application/json
+
+{
+    "id_carrito": "6811477c-9db7-4248-b88e-ff58d8edff1b",
+    "id_cliente": "8f093da3-d9e8-49d2-9c39-aef801894382",
+    "total": 140000,
+    "metodo_pago": "transferencia",
+    "descuento": 0,
+    "tipo_venta": "credito"
+}
+
+######
+
+PUT http://localhost:3000/facturas/08c4d6a1-6b13-43c3-9899-7bb00f1ea4f8
+Content-Type: application/json
+
+{
+    "id_carrito": "6811477c-9db7-4248-b88e-ff58d8edff1b",
+    "id_cliente": "8f093da3-d9e8-49d2-9c39-aef801894382",
+    "total": 140000,
+    "metodo_pago": "cheque",
+    "descuento": 0,
+    "tipo_venta": "credito"
+}
+
+
+######
+
+DELETE http://localhost:3000/facturas/08c4d6a1-6b13-43c3-9899-7bb00f1ea4f8

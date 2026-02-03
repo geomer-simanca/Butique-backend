@@ -1,0 +1,35 @@
+GET http://localhost:3000/cuotas
+
+#####
+
+GET http://localhost:3000/cuotas/91c9c655-feaf-4aec-a176-cc95a88f79a3
+
+#####
+POST http://localhost:3000/cuotas
+Content-Type: application/json
+
+{
+    "id_credito":"acc9a758-ec45-4081-ae8c-91ce4f6d9e29", 
+    "numero_cuota": 3,
+    "monto_cuota": 100.0,
+    "fecha_vencimiento": "2024-01-01T00:00:00Z",
+    "estado": "pendiente"
+}
+
+######
+
+PUT http://localhost:3000/cuotas/91c9c655-feaf-4aec-a176-cc95a88f79a3
+Content-Type: application/json
+
+{
+    "id_credito":"acc9a758-ec45-4081-ae8c-91ce4f6d9e29", 
+    "numero_cuota": 3,
+    "monto_cuota": 100.0,
+    "fecha_vencimiento": "2024-01-01T00:00:00Z",
+    "estado": "pagado"
+}
+
+
+######
+
+DELETE http://localhost:3000/cuotas/a5153032-264a-43ee-965a-39e6df6262ba

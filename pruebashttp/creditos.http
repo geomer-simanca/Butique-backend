@@ -1,0 +1,44 @@
+GET http://localhost:3000/creditos
+
+#####
+
+GET http://localhost:3000/creditos/68b721b6-811a-4866-bd7e-8cc1e7f8efff
+
+#####
+POST http://localhost:3000/creditos
+Content-Type: application/json
+
+{
+    "id_cliente": "e1ff5879-a560-4159-863b-0cd46b91465c",
+    "id_factura": "ed6d786c-3fc9-43f6-b2ad-e756aac4323c",
+    "tipo_interes": "simple",
+    "valor_interes": 5.5,
+    "monto_total": 1000.0,
+    "debe": 1000.0,
+    "numero_cuotas": 12,
+    "fecha_inicio": "2024-01-01T00:00:00Z",
+    "estado": "activo"
+}
+
+######
+
+PUT http://localhost:3000/creditos/68b721b6-811a-4866-bd7e-8cc1e7f8efff
+Content-Type: application/json
+
+{
+    "id_cliente": "e1ff5879-a560-4159-863b-0cd46b91465c",
+    "id_factura": "ed6d786c-3fc9-43f6-b2ad-e756aac4323c",
+    "tipo_interes": "simple",
+    "valor_interes": 5.5,
+    "monto_total": 1000.0,
+    "debe": 1000.0,
+    "numero_cuotas": 12,
+    "fecha_inicio": "2024-01-01T00:00:00Z",
+    "estado": "pagado"
+    
+}
+
+
+######
+
+DELETE http://localhost:3000/creditos/68b721b6-811a-4866-bd7e-8cc1e7f8efff

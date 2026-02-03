@@ -1,0 +1,32 @@
+GET http://localhost:3000/pagointereses
+
+#####
+
+GET http://localhost:3000/pagointereses/95994b22-a7b4-400e-8655-5f38746df532
+
+#####
+POST http://localhost:3000/pagointereses
+Content-Type: application/json
+
+{
+    "id_cuota": "91c9c655-feaf-4aec-a176-cc95a88f79a3",
+    "monto_pagado": 10000,
+    "metodo_pago": "tarjeta"
+}
+
+######
+
+PUT http://localhost:3000/pagointereses/95994b22-a7b4-400e-8655-5f38746df532
+Content-Type: application/json
+
+{
+    "id_cuota": "91c9c655-feaf-4aec-a176-cc95a88f79a3",
+    "fecha_pago": "2024-01-15T00:00:00.000Z",
+    "monto_pagado": 10000,
+    "metodo_pago": "efectivo"
+}
+
+
+######
+
+DELETE http://localhost:3000/pagointereses/95994b22-a7b4-400e-8655-5f38746df532

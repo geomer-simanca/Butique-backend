@@ -1,0 +1,28 @@
+GET http://localhost:3000/carritos
+
+#####
+
+GET http://localhost:3000/carritos/18a76292-4d2f-40f1-9870-5bdcefe1b4b9
+
+#####
+POST http://localhost:3000/carritos
+Content-Type: application/json
+
+{
+    "estado": "pagado"
+}
+
+######
+
+PUT http://localhost:3000/carritos/6811477c-9db7-4248-b88e-ff58d8edff1b
+Content-Type: application/json
+
+{
+    "estado": "cerrado"
+    
+}
+
+
+######
+
+DELETE http://localhost:3000/carritos/18a76292-4d2f-40f1-9870-5bdcefe1b4b

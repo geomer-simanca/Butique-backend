@@ -1,0 +1,35 @@
+GET http://localhost:3000/carritodetalle
+
+#####
+
+GET http://localhost:3000/carritodetalle/f853c0c8-076d-4754-8235-c6d55b6bcf07
+
+#####
+POST http://localhost:3000/carritodetalle
+Content-Type: application/json
+
+{
+    "id_carrito": "6811477c-9db7-4248-b88e-ff58d8edff1b",
+    "id_producto": "44cac1d1-e5a4-46a8-b8ff-91602fc633ed",
+    "cantidad": 2,
+    "preciounitario": 70000,
+    "subtotal": 140000
+}
+
+######
+
+PUT http://localhost:3000/carritodetalle/f014237e-627f-437f-a69f-8ae8f20202ec
+Content-Type: application/json
+
+{
+    "id_carrito": "6811477c-9db7-4248-b88e-ff58d8edff1b",
+    "id_producto": "44cac1d1-e5a4-46a8-b8ff-91602fc633ed",
+    "cantidad": 3,
+    "preciounitario": 70000,
+    "subtotal": 210000
+}
+
+
+######
+
+DELETE http://localhost:3000/carritodetalle/f014237e-627f-437f-a69f-8ae8f20202ec

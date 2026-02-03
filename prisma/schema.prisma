@@ -102,7 +102,7 @@ model Creditos{
 model Pago_interes{
   id String @id @default(uuid())
   id_cuota String
-  fecha_pago DateTime
+  fecha_pago DateTime @default(now())
   monto_pagado Float
   metodo_pago String
 

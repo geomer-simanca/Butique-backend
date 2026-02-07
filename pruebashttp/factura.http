@@ -9,7 +9,7 @@ POST http://localhost:3000/facturas
 Content-Type: application/json
 
 {
-    "id_carrito": "6811477c-9db7-4248-b88e-ff58d8edff1b",
+
     "id_cliente": "8f093da3-d9e8-49d2-9c39-aef801894382",
     "total": 140000,
     "metodo_pago": "transferencia",
@@ -34,4 +34,4 @@ Content-Type: application/json
 
 ######
 
-DELETE http://localhost:3000/facturas/08c4d6a1-6b13-43c3-9899-7bb00f1ea4f8
+DELETE http://localhost:3000/facturas/0904c2fe-612b-4cee-94ef-c465ba60fa80

@@ -2,7 +2,7 @@ GET http://localhost:3000/productos
 
 #####
 
-GET http://localhost:3000/productos/35676
+GET http://localhost:3000/productos/PRB001
 
 
 #####
@@ -10,12 +10,12 @@ POST http://localhost:3000/productos
 Content-Type: application/json
 
 {
-    "nombre": "Producto de prueba",
-    "codigo": "345676", 
+    "nombre": "jean de jeffry",
+    "codigo": "2133", 
     "genero": "Masculino",
     "precio_costo": 10000,
     "precio_venta": 15000,
-    "stock_inicial": 10,
+    "stock_inicial": 4,
     "stock_minimo": 5,
     "proveedor": "Proveedor de prueba",
     "descripcion": "Producto de prueba para el sistema de inventario"
@@ -23,12 +23,12 @@ Content-Type: application/json
 
 ######
 
-PUT http://localhost:3000/productos/101010
+PUT http://localhost:3000/productos/PRB001
 Content-Type: application/json
 
 {
     "nombre": "nuevo productro",
-    "codigo": "101010",
+    "codigo": "PRB001",
     "genero": "Masculino",
     "precio_costo": 10000,
     "precio_venta": 15000
@@ -38,4 +38,4 @@ Content-Type: application/json
 
 ######
 
-DELETE http://localhost:3000/productos/101010
+DELETE http://localhost:3000/productos/PRB001

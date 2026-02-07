@@ -29,4 +29,4 @@ Content-Type: application/json
 
 ######
 
-DELETE http://localhost:3000/pagointereses/95994b22-a7b4-400e-8655-5f38746df532
+DELETE http://localhost:3000/pagointereses/eb60f3ee-80f1-4817-82c2-59aa155e7857

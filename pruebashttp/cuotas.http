@@ -32,4 +32,4 @@ Content-Type: application/json
 
 ######
 
-DELETE http://localhost:3000/cuotas/a5153032-264a-43ee-965a-39e6df6262ba
+DELETE http://localhost:3000/cuotas/91c9c655-feaf-4aec-a176-cc95a88f79a3

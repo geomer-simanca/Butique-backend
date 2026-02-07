@@ -42,12 +42,13 @@ class ClientesControllers {
                     error: "ya hay un cliente con esta cedula"
                 });
             }
+            return res.status(500).json({
+                error:"Error al crear el cliente",
+                details:error.message
+            })
 
         }
-        res.status(500).json({
-            error:"Error al crear el cliente",
-            details:error.message
-        })
+
             
 
 

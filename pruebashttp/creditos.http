@@ -41,4 +41,4 @@ Content-Type: application/json
 
 ######
 
-DELETE http://localhost:3000/creditos/68b721b6-811a-4866-bd7e-8cc1e7f8efff
+DELETE http://localhost:3000/creditos/acc9a758-ec45-4081-ae8c-91ce4f6d9e29

@@ -50,7 +50,7 @@ model Carrito{
   estado String
 
   detalle Carrito_detalle[]
-  factura Factura[]
+  
 }
 
 model Carrito_detalle{
@@ -67,7 +67,6 @@ model Carrito_detalle{
 
 model Factura{
   id String @id @default(uuid())
-  id_carrito String
   id_cliente String
   fecha DateTime @default(now())
   total Float
@@ -75,7 +74,7 @@ model Factura{
   descuento Float @default(0)
   tipo_venta String
 
-  carrito Carrito @relation(fields: [id_carrito], references: [id])
+  
   cliente Clientes @relation(fields: [id_cliente], references: [id])
 
   creditos Creditos[]

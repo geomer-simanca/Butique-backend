@@ -14,7 +14,7 @@ Content-Type: application/json
 
 ######
 
-PUT http://localhost:3000/carritos/6811477c-9db7-4248-b88e-ff58d8edff1b
+PUT http://localhost:3000/carritos/878cfdac-d3c6-4e6d-884e-3e1c6ec7fe70
 Content-Type: application/json
 
 {
@@ -25,4 +25,4 @@ Content-Type: application/json
 
 ######
 
-DELETE http://localhost:3000/carritos/18a76292-4d2f-40f1-9870-5bdcefe1b4b
+DELETE http://localhost:3000/carritos/862ad554-16b4-4448-9193-c032f98275f5

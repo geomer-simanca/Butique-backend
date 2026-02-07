@@ -9,7 +9,7 @@ POST http://localhost:3000/clientes
 Content-Type: application/json
 
 {
-    "cedula": "1129526228",
+    "cedula": "11228",
     "nombre": "Vicky Milena Navarro",
     "telefono": "1234567890",
     "email": "geomersimanca@gmail.com"
